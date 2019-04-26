@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "262938537962",
+    "firebase_url": "https://agright-f029e.firebaseio.com",
+    "project_id": "agright-f029e",
+    "storage_bucket": "agright-f029e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:262938537962:android:d530a3792771ac6a",
+        "android_client_info": {
+          "package_name": "com.example.agright"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "262938537962-fprhvasu71bkmjltpeap1sd5gjm45u5s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMefNTUray_4OKUJY4zrvqrz4Y9XoJ-Vo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
