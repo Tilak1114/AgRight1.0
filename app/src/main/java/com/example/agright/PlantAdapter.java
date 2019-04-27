@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
@@ -20,8 +21,15 @@ public class PlantAdapter extends FirestoreRecyclerAdapter<Plant, PlantAdapter.P
      *
      * @param options
      */
-    public PlantAdapter(@NonNull FirestoreRecyclerOptions<Plant> options) {
+    ItemclickListener itemclickListener;
+
+    public PlantAdapter(@NonNull FirestoreRecyclerOptions<Plant> options, ItemclickListener itemclickListener) {
         super(options);
+        this.itemclickListener = itemclickListener;
+    }
+
+    public interface ItemclickListener{
+        public void onItemClick();
     }
 
     @Override
@@ -29,6 +37,13 @@ public class PlantAdapter extends FirestoreRecyclerAdapter<Plant, PlantAdapter.P
         holder.plantName.setText(model.getPlantName());
         holder.plantId.setText(model.getPlantId());
         holder.plantStatus.setText(model.getPlantStatus());
+
+        holder.parentLay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                itemclickListener.onItemClick();
+            }
+        });
     }
 
     @NonNull
@@ -42,6 +57,7 @@ public class PlantAdapter extends FirestoreRecyclerAdapter<Plant, PlantAdapter.P
     class PlantHolder extends RecyclerView.ViewHolder{
         TextView plantName, plantId, plantStatus;
         CircleImageView plantImg;
+        RelativeLayout parentLay;
 
         public PlantHolder(@NonNull View itemView) {
             super(itemView);
@@ -49,6 +65,7 @@ public class PlantAdapter extends FirestoreRecyclerAdapter<Plant, PlantAdapter.P
             plantName = itemView.findViewById(R.id.plantName);
             plantImg = itemView.findViewById(R.id.plantprofilepic);
             plantStatus = itemView.findViewById(R.id.plantStatus);
+            parentLay = itemView.findViewById(R.id.parent_lay);
         }
     }
 }

@@ -1,5 +1,6 @@
 package com.example.agright;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -16,7 +17,7 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
 
-public class HomeFragment extends Fragment {
+public class HomeFragment extends Fragment implements PlantAdapter.ItemclickListener{
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     CollectionReference plantRef;
     RecyclerView recyclerView;
@@ -36,7 +37,7 @@ public class HomeFragment extends Fragment {
     private void setupRecyclerView() {
         Query query = plantRef;
         FirestoreRecyclerOptions<Plant> options = new FirestoreRecyclerOptions.Builder<Plant>().setQuery(query, Plant.class).build();
-        adapter = new PlantAdapter(options);
+        adapter = new PlantAdapter(options, this);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerView.setAdapter(adapter);
     }
@@ -51,5 +52,10 @@ public class HomeFragment extends Fragment {
     public void onStop() {
         super.onStop();
         adapter.stopListening();
+    }
+
+    @Override
+    public void onItemClick() {
+        startActivity(new Intent(getActivity(), PlantDetails.class));
     }
 }

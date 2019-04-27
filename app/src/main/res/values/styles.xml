@@ -10,4 +10,7 @@
     <style name="Widget.BottomNavigationView" parent="Widget.Design.BottomNavigationView">
         <item name="fontFamily">@font/product_sans_reg</item>
     </style>
+    <style name="progressBarTheme" parent="@style/Theme.AppCompat">
+        <item name="colorAccent">@color/colorpb</item>
+    </style>
 </resources>
