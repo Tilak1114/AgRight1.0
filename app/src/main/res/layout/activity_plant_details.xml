@@ -37,7 +37,7 @@
                 android:fontFamily="@font/product_sans_reg"
                 android:layout_below="@id/detailsAvatar"
                 android:layout_marginTop="10dp"
-                android:textSize="16sp"
+                android:textSize="22sp"
                 android:textStyle="bold"
                 android:id="@+id/detailsPlantName"
                 android:layout_centerHorizontal="true"
@@ -48,11 +48,13 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/product_sans_reg"
                 android:text="#8b2d3747"
+                android:textSize="20sp"
                 android:id="@+id/detaildPlantId"
                 android:layout_marginTop="5dp"
                 android:layout_centerHorizontal="true"
                 android:layout_below="@id/detailsPlantName"/>
             <RelativeLayout
+                android:id="@+id/growthLay"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/detaildPlantId"
@@ -65,7 +67,7 @@
                     android:textColor="#55A629"
                     android:textStyle="bold"
                     android:id="@+id/growthtv"
-                    android:textSize="16dp"
+                    android:textSize="20sp"
                     android:layout_centerHorizontal="true"
                     android:text="Growth Progress"/>
                 <ProgressBar
@@ -74,13 +76,13 @@
                     android:id="@+id/progressbarGrowth"
                     android:progress="75"
                     android:theme="@style/progressBarTheme"
-                    android:layout_marginEnd="90dp"
-                    android:layout_marginStart="90dp"
+                    android:layout_marginEnd="80dp"
+                    android:layout_marginStart="80dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="30dp"
                     android:layout_below="@id/growthtv"/>
                 <ImageView
-                    android:layout_marginStart="60dp"
+                    android:layout_marginStart="50dp"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:layout_marginTop="50dp"
@@ -94,6 +96,185 @@
                     android:layout_marginTop="40dp"
                     android:background="@drawable/plantprog"
                     />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:id="@+id/summaryLay"
+                android:layout_below="@id/growthLay"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorpb"
+                    android:id="@+id/summaryTv"
+                    android:fontFamily="@font/product_sans_reg"
+                    android:text="Summary"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20sp"
+                    android:textSize="18sp"
+                    android:id="@+id/summaryInfo"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginStart="30dp"
+                    android:fontFamily="@font/product_sans_reg"
+                    android:text="Lettuce is an annual plant of the daisy family, Asteraceae. It is most often grown as a leaf vegetable, but sometimes for its stem and seeds. Lettuce is most often used for salads, although it is also seen in other kinds of food, such as soups, sandwiches and wraps; it can also be grilled."
+                    android:layout_below="@id/summaryTv"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:id="@+id/sensorDb"
+                android:layout_below="@id/summaryLay"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/product_sans_reg"
+                    android:text="Sensor Dashboard"
+                    android:textSize="20sp"
+                    android:id="@+id/sensorDbTv"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@android:color/holo_red_light"
+                    />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:id="@+id/sensorDbLay"
+                    android:layout_marginBottom="30dp"
+                    android:layout_below="@id/sensorDbTv"
+                    android:layout_marginTop="30dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:id="@+id/ECTV"
+                        android:fontFamily="@font/product_sans_reg"
+                        android:text="Electric Conductivity"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="mho"
+                        android:layout_alignParentEnd="true"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/product_sans_reg"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:layout_below="@id/ECTV"
+                        android:layout_marginTop="20dp"
+                        android:id="@+id/pHTv"
+                        android:fontFamily="@font/product_sans_reg"
+                        android:text="PH"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_below="@id/ECTV"
+                        android:layout_height="wrap_content"
+                        android:text="pH"
+                        android:layout_marginTop="20dp"
+                        android:layout_alignParentEnd="true"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/product_sans_reg"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:layout_below="@id/pHTv"
+                        android:layout_marginTop="20dp"
+                        android:id="@+id/TempTv"
+                        android:fontFamily="@font/product_sans_reg"
+                        android:text="Temperature"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_below="@id/pHTv"
+                        android:layout_height="wrap_content"
+                        android:text="C"
+                        android:layout_marginTop="20dp"
+                        android:layout_alignParentEnd="true"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/product_sans_reg"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:layout_below="@id/TempTv"
+                        android:layout_marginTop="20dp"
+                        android:id="@+id/HumiTv"
+                        android:fontFamily="@font/product_sans_reg"
+                        android:text="Humidity"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_below="@id/TempTv"
+                        android:layout_height="wrap_content"
+                        android:text="%"
+                        android:layout_marginTop="20dp"
+                        android:layout_alignParentEnd="true"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/product_sans_reg"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:layout_below="@id/HumiTv"
+                        android:layout_marginTop="20dp"
+                        android:id="@+id/WaterTemperatureTv"
+                        android:fontFamily="@font/product_sans_reg"
+                        android:text="Water Temperature"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_below="@id/HumiTv"
+                        android:layout_height="wrap_content"
+                        android:text="C"
+                        android:layout_marginTop="20dp"
+                        android:layout_alignParentEnd="true"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/product_sans_reg"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:layout_below="@id/WaterTemperatureTv"
+                        android:layout_marginTop="20dp"
+                        android:id="@+id/Co2Tv"
+                        android:fontFamily="@font/product_sans_reg"
+                        android:text="CO2"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_below="@id/WaterTemperatureTv"
+                        android:layout_height="wrap_content"
+                        android:text="ppm"
+                        android:layout_marginTop="20dp"
+                        android:layout_alignParentEnd="true"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/product_sans_reg"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:layout_below="@id/Co2Tv"
+                        android:layout_marginTop="20dp"
+                        android:id="@+id/ldrtv"
+                        android:fontFamily="@font/product_sans_reg"
+                        android:text="LDR"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_below="@id/Co2Tv"
+                        android:layout_height="wrap_content"
+                        android:text="CD"
+                        android:layout_marginTop="20dp"
+                        android:layout_alignParentEnd="true"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/product_sans_reg"/>
+                </RelativeLayout>
             </RelativeLayout>
         </RelativeLayout>
     </ScrollView>
