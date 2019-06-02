@@ -41,7 +41,7 @@
                 android:textStyle="bold"
                 android:id="@+id/detailsPlantName"
                 android:layout_centerHorizontal="true"
-                android:text="Lettuce Avenger #34"
+                android:text="Basil #34"
                 />
             <TextView
                 android:layout_width="wrap_content"
@@ -110,7 +110,7 @@
                     android:layout_marginTop="20dp"
                     android:textSize="20sp"
                     android:textStyle="bold"
-                    android:textColor="@color/colorpb"
+                    android:textColor="#737373"
                     android:id="@+id/summaryTv"
                     android:fontFamily="@font/product_sans_reg"
                     android:text="Summary"/>
@@ -123,7 +123,7 @@
                     android:layout_marginEnd="30dp"
                     android:layout_marginStart="30dp"
                     android:fontFamily="@font/product_sans_reg"
-                    android:text="Lettuce is an annual plant of the daisy family, Asteraceae. It is most often grown as a leaf vegetable, but sometimes for its stem and seeds. Lettuce is most often used for salads, although it is also seen in other kinds of food, such as soups, sandwiches and wraps; it can also be grilled."
+                    android:text="Basil, also called great basil or Saint-Joseph's-wort, is a culinary herb of the family Lamiaceae. Basil is native to tropical regions from central Africa to Southeast Asia. It is a tender plant, and is used in cuisines worldwide."
                     android:layout_below="@id/summaryTv"/>
             </RelativeLayout>
             <RelativeLayout
@@ -168,6 +168,7 @@
                         android:text="Electric Conductivity"/>
                     <TextView
                         android:layout_width="wrap_content"
+                        android:id="@+id/ecVal"
                         android:layout_height="wrap_content"
                         android:text="mho"
                         android:layout_marginEnd="10dp"
@@ -193,6 +194,7 @@
                         android:layout_below="@id/ECTV"
                         android:layout_height="wrap_content"
                         android:text="pH"
+                        android:id="@+id/phVal"
                         android:layout_marginEnd="10dp"
                         android:textColor="@android:color/white"
                         android:layout_marginTop="20dp"
@@ -215,6 +217,7 @@
                         android:layout_below="@id/pHTv"
                         android:layout_height="wrap_content"
                         android:text="C"
+                        android:id="@+id/tempVal"
                         android:layout_marginEnd="10dp"
                         android:textColor="@android:color/white"
                         android:layout_marginTop="20dp"
@@ -236,6 +239,7 @@
                         android:layout_width="wrap_content"
                         android:layout_below="@id/TempTv"
                         android:layout_height="wrap_content"
+                        android:id="@+id/HumiVal"
                         android:text="%"
                         android:layout_marginEnd="10dp"
                         android:textColor="@android:color/white"
@@ -258,7 +262,8 @@
                         android:layout_width="wrap_content"
                         android:layout_below="@id/HumiTv"
                         android:layout_height="wrap_content"
-                        android:text="C"
+                        android:text="c"
+                        android:id="@+id/water_tempVal"
                         android:layout_marginEnd="10dp"
                         android:textColor="@android:color/white"
                         android:layout_marginTop="20dp"
@@ -333,6 +338,24 @@
                         android:fontFamily="@font/product_sans_reg"/>
                 </RelativeLayout>
             </RelativeLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sensorDb"
+                android:text="Witness the magic"
+                android:textSize="22sp"
+                android:id="@+id/imgVText"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/product_sans_reg"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:id="@+id/plantImage"
+                android:layout_below="@id/imgVText"/>
         </RelativeLayout>
     </ScrollView>
 </RelativeLayout>

@@ -29,6 +29,9 @@ public class MainScr extends AppCompatActivity {
                     case R.id.action_community:
                         segmentSelected = new CommunityFragment();
                         break;
+                    case R.id.action_settings:
+                        segmentSelected = new SettingsFragment();
+                        break;
                 }
                 getSupportFragmentManager().beginTransaction().replace(R.id.frag_container, segmentSelected)
                         .addToBackStack(null).commit();
