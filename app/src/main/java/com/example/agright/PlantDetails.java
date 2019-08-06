@@ -187,4 +187,16 @@ public class PlantDetails extends AppCompatActivity {
         timelineRv.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
         timelineRv.setAdapter(adapter);
     }
+    @Override
+    public void onStart() {
+        super.onStart();
+        adapter.startListening();
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        adapter.stopListening();
+    }
+
 }

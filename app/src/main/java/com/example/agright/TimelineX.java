@@ -1,7 +1,13 @@
 package com.example.agright;
 
+import java.sql.Time;
+
 public class TimelineX {
     private String date, title, summary;
+
+    public TimelineX(){
+
+    }
 
     public TimelineX(String date, String summary, String title) {
         this.date = date;
