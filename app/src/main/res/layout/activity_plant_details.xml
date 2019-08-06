@@ -128,8 +128,35 @@
             </RelativeLayout>
             <RelativeLayout
                 android:layout_width="match_parent"
+                android:id="@+id/timelinelay"
+                android:layout_height="300dp"
+                android:layout_below="@id/summaryLay">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#737373"
+                    android:id="@+id/timelineTv"
+                    android:fontFamily="@font/product_sans_reg"
+                    android:text="Timeline"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/timelineRv"
+                    android:layout_below="@id/timelineTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
                 android:id="@+id/sensorDb"
-                android:layout_below="@id/summaryLay"
+                android:layout_below="@id/timelinelay"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp">
 

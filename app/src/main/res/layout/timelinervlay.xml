@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="80dp">
+    <RelativeLayout
+        android:id="@+id/cirline"
+        android:layout_width="10dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="20dp">
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:src="@drawable/circle"
+            android:layout_centerVertical="true" />
+        <View
+            android:layout_centerInParent="true"
+            android:layout_width="2dp"
+            android:layout_height="80dp"
+            android:background="#1FA161"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_height="match_parent"
+        android:id="@+id/horigrayline"
+        android:layout_width="25dp"
+        android:layout_toRightOf="@id/cirline">
+        <View
+            android:layout_width="match_parent"
+            android:layout_margin="5dp"
+            android:layout_height="1dp"
+            android:layout_centerInParent="true"
+            android:background="#595B5D"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:elevation="2dp"
+        android:translationZ="4dp"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@id/horigrayline"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/recttimeline"
+        android:layout_marginBottom="5dp"
+        android:layout_marginStart="-5dp"
+        android:layout_marginEnd="20dp">
+        <TextView
+            android:id="@+id/datervtv"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/product_sans_reg"
+            android:textSize="8sp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="AUG 8 12:05"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/titlervtv"
+            android:textSize="14sp"
+            android:fontFamily="@font/product_sans_reg"
+            android:layout_marginStart="20dp"
+            android:layout_below="@id/datervtv"
+            android:textStyle="bold"
+            android:text="Solution made acidic"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="20dp"
+            android:textSize="10sp"
+            android:fontFamily="@font/product_sans_reg"
+            android:text="pH value changed from x to y"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/subtitlervtv"/>
+    </RelativeLayout>
+
+</RelativeLayout>

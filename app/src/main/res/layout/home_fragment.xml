@@ -27,7 +27,6 @@
         android:id="@+id/addMembfab"
         android:layout_height="55dp"
         android:backgroundTint="#1BA160"
-
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_marginBottom="20dp"

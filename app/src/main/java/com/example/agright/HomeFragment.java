@@ -27,7 +27,7 @@ public class HomeFragment extends Fragment implements PlantAdapter.ItemclickList
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View homeFragView = inflater.inflate(R.layout.home_fragment, container, false);
         recyclerView = homeFragView.findViewById(R.id.activePlantRv);
-        plantRef = db.collection("Plants");
+        plantRef = db.collection("Plants/TestPlant/Info");
 
         setupRecyclerView();
 
