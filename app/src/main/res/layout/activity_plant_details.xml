@@ -126,37 +126,11 @@
                     android:text="Basil, also called great basil or Saint-Joseph's-wort, is a culinary herb of the family Lamiaceae. Basil is native to tropical regions from central Africa to Southeast Asia. It is a tender plant, and is used in cuisines worldwide."
                     android:layout_below="@id/summaryTv"/>
             </RelativeLayout>
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:id="@+id/timelinelay"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/summaryLay">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:layout_centerHorizontal="true"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:textColor="#737373"
-                    android:id="@+id/timelineTv"
-                    android:fontFamily="@font/product_sans_reg"
-                    android:text="Timeline"/>
-
-                <android.support.v7.widget.RecyclerView
-                    android:layout_marginTop="20dp"
-                    android:id="@+id/timelineRv"
-                    android:layout_below="@id/timelineTv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-
-            </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:id="@+id/sensorDb"
-                android:layout_below="@id/timelinelay"
+                android:layout_below="@id/summaryLay"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp">
 
@@ -166,7 +140,7 @@
                     android:layout_marginStart="20dp"
                     android:layout_marginEnd="20dp"
                     android:id="@+id/sensorDbLay"
-                    android:layout_marginBottom="30dp"
+                    android:layout_marginBottom="40dp"
                     android:background="@drawable/round_edge_bck"
                     android:alpha="0.8"
                     android:layout_marginTop="30dp">
@@ -293,72 +267,6 @@
                         android:id="@+id/water_tempVal"
                         android:layout_marginEnd="10dp"
                         android:textColor="@android:color/white"
-                        android:layout_marginTop="20dp"
-                        android:layout_alignParentEnd="true"
-                        android:textSize="18sp"
-                        android:fontFamily="@font/product_sans_reg"/>
-                    <TextView
-                        android:layout_marginStart="10dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="18sp"
-                        android:textColor="@android:color/white"
-                        android:layout_below="@id/WaterTemperatureTv"
-                        android:layout_marginTop="20dp"
-                        android:id="@+id/Co2Tv"
-                        android:fontFamily="@font/product_sans_reg"
-                        android:text="CO2"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_below="@id/WaterTemperatureTv"
-                        android:layout_height="wrap_content"
-                        android:text="ppm"
-                        android:layout_marginEnd="10dp"
-                        android:textColor="@android:color/white"
-                        android:layout_marginTop="20dp"
-                        android:layout_alignParentEnd="true"
-                        android:textSize="18sp"
-                        android:fontFamily="@font/product_sans_reg"/>
-                    <TextView
-                        android:layout_marginStart="10dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="18sp"
-                        android:layout_below="@id/Co2Tv"
-                        android:textColor="@android:color/white"
-                        android:layout_marginTop="20dp"
-                        android:id="@+id/ldrtv"
-                        android:fontFamily="@font/product_sans_reg"
-                        android:text="LDR"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_below="@id/Co2Tv"
-                        android:layout_height="wrap_content"
-                        android:textColor="@android:color/white"
-                        android:text="CD"
-                        android:layout_marginEnd="10dp"
-                        android:layout_marginTop="20dp"
-                        android:layout_alignParentEnd="true"
-                        android:textSize="18sp"
-                        android:fontFamily="@font/product_sans_reg"/>
-                    <TextView
-                        android:layout_marginStart="10dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="18sp"
-                        android:layout_below="@id/Co2Tv"
-                        android:textColor="@android:color/white"
-                        android:layout_marginTop="20dp"
-                        android:id="@+id/emptytv"
-                        android:fontFamily="@font/product_sans_reg"
-                        android:text=""/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_below="@id/ldrtv"
-                        android:layout_height="wrap_content"
-                        android:textColor="@android:color/white"
-                        android:text=""
-                        android:layout_marginEnd="10dp"
                         android:layout_marginTop="20dp"
                         android:layout_alignParentEnd="true"
                         android:textSize="18sp"
