@@ -52,7 +52,6 @@ public class PlantDetails extends AppCompatActivity {
         setContentView(R.layout.activity_plant_details);
         growthProgress = findViewById(R.id.progressbarGrowth);
         close = findViewById(R.id.closedetails);
-        timelineRv = findViewById(R.id.timelineRv);
         waterTempVal = findViewById(R.id.water_tempVal);
         phVal = findViewById(R.id.phVal);
         ecVal = findViewById(R.id.ecVal);
@@ -80,7 +79,6 @@ public class PlantDetails extends AppCompatActivity {
             }
         });
 
-        setupTimeline();
 
         storageReference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
             @Override
@@ -183,20 +181,14 @@ public class PlantDetails extends AppCompatActivity {
     private void setupTimeline() {
         Query query = timelinexref;
         FirestoreRecyclerOptions<TimelineX> options = new FirestoreRecyclerOptions.Builder<TimelineX>().setQuery(query, TimelineX.class).build();
-        adapter = new TimelineAdapter(options);
-        timelineRv.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
-        timelineRv.setAdapter(adapter);
     }
     @Override
     public void onStart() {
         super.onStart();
-        adapter.startListening();
     }
 
     @Override
     public void onStop() {
         super.onStop();
-        adapter.stopListening();
     }
-
 }
